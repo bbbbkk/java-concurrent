@@ -6,14 +6,11 @@ public class SynchronizedFooTest {
 
     public void first(Runnable printFirst) throws InterruptedException {
         synchronized (this) {
-            if (flag != 0) {
-                this.wait();//等待
-            }
             //如果flag == 0
             // printFirst.run() outputs "first". Do not change or remove this line.
             printFirst.run();
             flag = 1;
-            this.notifyAll();
+            this.notify();
         }
     }
 
