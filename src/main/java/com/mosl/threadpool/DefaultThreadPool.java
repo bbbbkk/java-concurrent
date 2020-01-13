@@ -2,7 +2,6 @@ package com.mosl.threadpool;
 
 public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> {
 
-    private static final int MAX_WORKER
     @Override
     public void execute(Job job) {
 
